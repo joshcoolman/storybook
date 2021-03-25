@@ -4,10 +4,10 @@
 
 In the project directory, you can run:
 
-### `npm run dev`
+#### `npm run dev`
 runs the react app
 
-### `npm run storybook`
+#### `npm run storybook`
 runs the storybook app 
 
 
