@@ -4,7 +4,7 @@
 
 In the project directory, you can run:
 
-#### `npm run dev`
+#### `npm run start`
 runs the react app
 
 #### `npm run storybook`
