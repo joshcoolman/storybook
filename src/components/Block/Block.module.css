@@ -1,0 +1,18 @@
+.main {
+    background: var(--color-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    border-radius: var(--size-xs);
+}
+
+.main h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    margin-bottom: 5px;
+    ;
+}
