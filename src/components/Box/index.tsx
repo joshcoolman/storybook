@@ -37,8 +37,8 @@ export interface BoxProps {
 const Box: React.FC<BoxProps> = (props) => {
   const {
     rc = true,
-    color = "#333",
-    bg = "whitesmoke",
+    color = "inherit",
+    bg = "inherit",
     p = 10,
     m = 10,
     center = false,

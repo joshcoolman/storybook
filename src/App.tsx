@@ -2,26 +2,34 @@ import React, { useState } from "react";
 import "./App.css";
 import Block from "./components/Block";
 import Box from "./components/Box";
+import Grid from "./components/Grid";
 
 function App() {
-  const [active, setActive] = useState<string | undefined>("FooManChoo");
+  const [active, setActive] = useState<string | undefined>("Glam");
 
   return (
     <div>
-      <Grid cols={4} gap={5} pad={20}>
-        <Box {...bx.primary}>
-          <h1>Boom!</h1>
-        </Box>
-        <Box {...bx.secondary}>
-          <h1>Boom!</h1>
-        </Box>
-        <Box {...bx.accent}>
-          <h1>Boom!</h1>
-        </Box>
-        <Box {...bx.default}>
-          <h1>Boom!</h1>
-        </Box>
-      </Grid>
+      <div
+        style={{
+          color: "var(--color-yellow)",
+          background: "var(--color-purple)",
+        }}
+      >
+        <Grid cols={2} gap={5} pad={20}>
+          <Box>
+            <h1>Boom!</h1>
+          </Box>
+          <Box {...bx.secondary}>
+            <h1>Boom!</h1>
+          </Box>
+          <Box {...bx.accent}>
+            <h1>Boom!</h1>
+          </Box>
+          <Box {...bx.default}>
+            <h1>Boom!</h1>
+          </Box>
+        </Grid>
+      </div>
 
       <Block name={active} setName={setActive}></Block>
       <div className="grid">
@@ -40,21 +48,10 @@ function App() {
 
 export default App;
 
-interface GridProps {
-  cols?: number;
-  gap?: number;
-  pad?: number;
-}
+interface iColorContainer {}
 
-const Grid: React.FC<GridProps> = (props) => {
-  const { cols = 3, gap = 10, pad } = props;
-  const GridStyle = {
-    display: `grid`,
-    gap: `${gap}px`,
-    padding: `${pad ? pad : 0}px`,
-    gridTemplateColumns: `repeat(${cols}, 1fr)`,
-  };
-  return <div style={GridStyle}>{props.children}</div>;
+const ColorContainer: React.FC<iColorContainer> = (props) => {
+  return <div>{props.children}</div>;
 };
 
 const bx_base = {
